@@ -31,4 +31,23 @@
 
     definiert Werte/Rahmen vor und muss später dann verwendet werden, nicht mehr Werte!
 */
+var RandomPoem;
+(function (RandomPoem) {
+    let subject = ["Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore"];
+    let predicate = ["braut", "liebt", "studiert", "versteckt", "zaubert", "zerstört"];
+    let object = ["Zaubertränke", "Horkruxe", "Hogwarts", "Zauberstäbe", "Dementoren", "Werwölfe"];
+    //console.log(subject);
+    //console.log(predicate);
+    //console.log(object);
+    for (let i = subject.length; i > 0; i--) { //i>0 --> Schleife geht bis 0 durch i-- --> Eine Wiederholung wird in jeder Ausführung abgezogen
+        //console.log(i);
+        //console.log(getVerse(subject, predicate, object));
+        getVerse(subject, predicate, object);
+    }
+    function getVerse(_subject, _predicate, _object) {
+        let sentence1 = "";
+        let randomNumb = Math.floor(Math.random() * _subject.length);
+        _subject.splice(randomNumb, 1);
+    }
+})(RandomPoem || (RandomPoem = {}));
 //# sourceMappingURL=my-script.js.map

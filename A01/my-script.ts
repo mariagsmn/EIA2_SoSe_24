@@ -52,9 +52,17 @@ for (let i = subject.length; i > 0; i--) { //i>0 --> Schleife geht bis 0 durch i
 }
 
 function getVerse(_subject: string[], _predicate:string[], _object: string[]):void {
-    let sentence1: string = "";
-    let randomNumb: number = Math.floor(Math.random() * _subject.length);
-    _subject.splice(randomNumb,1);
+    let sentence: string = "";
+    let randomNumbsubject: number = Math.floor(Math.random() * _subject.length);
+    let randomNumbpredicate: number = Math.floor(Math.random() * _predicate.length);
+    let randomNumbobject: number = Math.floor(Math.random() * _object.length);
+
+    sentence += _subject.splice(randomNumbsubject,1) + " "; //+= nimmt Wert und addiert subject.splice
+    sentence += _predicate.splice(randomNumbpredicate,1)+ " ";
+    sentence += _object.splice(randomNumbobject,1)+ " ";
+
+    console.log(sentence);
+    
 }
 
 

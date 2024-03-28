@@ -45,9 +45,14 @@ var RandomPoem;
         getVerse(subject, predicate, object);
     }
     function getVerse(_subject, _predicate, _object) {
-        let sentence1 = "";
-        let randomNumb = Math.floor(Math.random() * _subject.length);
-        _subject.splice(randomNumb, 1);
+        let sentence = "";
+        let randomNumbsubject = Math.floor(Math.random() * _subject.length);
+        let randomNumbpredicate = Math.floor(Math.random() * _predicate.length);
+        let randomNumbobject = Math.floor(Math.random() * _object.length);
+        sentence += _subject.splice(randomNumbsubject, 1) + " "; //+= nimmt Wert und addiert subject.splice
+        sentence += _predicate.splice(randomNumbpredicate, 1) + " ";
+        sentence += _object.splice(randomNumbobject, 1) + " ";
+        console.log(sentence);
     }
 })(RandomPoem || (RandomPoem = {}));
 //# sourceMappingURL=my-script.js.map

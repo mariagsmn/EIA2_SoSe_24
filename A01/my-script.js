@@ -42,7 +42,8 @@ var RandomPoem;
     for (let i = subject.length; i > 0; i--) { //i>0 --> Schleife geht bis 0 durch i-- --> Eine Wiederholung wird in jeder Ausführung abgezogen
         //console.log(i);
         //console.log(getVerse(subject, predicate, object));
-        getVerse(subject, predicate, object);
+        let sentence = getVerse(subject, predicate, object);
+        console.log(sentence);
     }
     function getVerse(_subject, _predicate, _object) {
         let sentence = "";
@@ -52,7 +53,7 @@ var RandomPoem;
         sentence += _subject.splice(randomNumbsubject, 1) + " "; //+= nimmt Wert und addiert subject.splice
         sentence += _predicate.splice(randomNumbpredicate, 1) + " ";
         sentence += _object.splice(randomNumbobject, 1) + " ";
-        console.log(sentence);
+        return sentence;
     }
 })(RandomPoem || (RandomPoem = {}));
 //# sourceMappingURL=my-script.js.map

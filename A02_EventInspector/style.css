@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+}
+
+.container {
+    display: flex; /* Flexbox verwenden, um die Rechtecke nebeneinander anzuordnen */
+    align-items: center; /* Zentriert die Rechtecke vertikal im Container */
+    width: 100%; /* 95% von Seite */
+    height: 50%;
+}
+
+.rectangle {
+    background-color: rgb(138, 176, 189);
+    margin: 20px; /* Abstand zwischen den Rechtecken */
+    width: 45%;
+    height: 60%;
+}
+
+.div1 {
+    background-color: lightslategray;
+}
+
+.rectangle:hover {
+    cursor: pointer; /* Mauszeiger wird zu Hand beim Hovern */
+
+}
+
+.fixed-span {
+    position: fixed;
+    height: 40px;
+    aspect-ratio: 2;
+    background-color: rgb(111, 141, 142);
+}
+

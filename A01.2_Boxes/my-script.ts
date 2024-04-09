@@ -3,7 +3,7 @@ namespace Boxes {
     let color: string;
     let x: number = 0;
     let y: number = 0;
-// Schleife zur Erstellung der Boxen
+// for-Schleife zur Erstellung der Boxen
     for (let i: number = 0; i < n; i++) {
         y += (i == 2) ? 20 : 50; // wenn y = 2 dann + 20, wenn nich 2, dann + 5
         x = (x + 170) % 400;

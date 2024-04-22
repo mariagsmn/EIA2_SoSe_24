@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufsliste</title>
+    <script src="my-script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+		<h1>WG Plan</h1>
+	</header>
+
+	<form>
+		<div class="form1" id="form">
+            <fieldset>
+				<legend>Titel Aufgabe</legend>
+                <input type="text" class="task">
+			</fieldset>
+			<fieldset>
+				<legend>Wer erledigt?</legend>
+				<select class="who">
+					<option value="maja">Maja</option>
+					<option value="johannes">Jojo</option>
+					<option value="theresa">Theresa</option>
+				</select>
+			</fieldset>
+			<fieldset>
+				<legend>Bis wann?</legend>
+                <input type="time" class="time">
+                <input type="date" class="date">
+			</fieldset>
+			<fieldset>
+				<legend>In Bearbeitung?</legend>
+				<input type="radio" class="in_process">Ja
+                <input type="radio" class="not_in_process">Nein
+			</fieldset>
+			<fieldset>
+				<legend>Kommentar</legend>
+                <input type="text" class="comment">
+			</fieldset>
+        
+		</div>
+	</form>
+    <div>
+        <button>add</button>
+    </div>
+
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
+

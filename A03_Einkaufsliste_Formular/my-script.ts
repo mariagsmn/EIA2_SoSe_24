@@ -1,74 +1,85 @@
-namespace A03{
+namespace Einkaufsliste_Formular {
+    
+    document.addEventListener('DOMContentLoaded', () => {
 
-    interface Task {
-        title: string;
-        who: string;
-        time: string;
-        date: string;
-        inProcess: boolean;
-        comment: string;
-    }
+        //  'newProduct'auswählen und Variable zuweisen
+        const newProductButton = document.querySelector('.newProduct') as HTMLButtonElement;
+
+        //  Event-Listener reagiert auf Klicks auf Button 
+        newProductButton.addEventListener('click', newProduct);
+
+        
+        function newProduct() {
+            // Kommentar in Konsole, wenn neues Produkt hinzugefügt wird
+            console.log("Ein neues Produkt wird hinzugefügt");
+            
+            // Hauptcontainer wird Variable zugewiesen
+            const container = document.querySelector('main');
+
+            // Neues div-Element 
+            const newDiv = document.createElement('div');
+            newDiv.className = 'box';
     
-    const tasks: Task[] = []; // Array zur Speicherung der Aufgaben
-    
-    // DOM-Elemente abrufen
-    const form = document.querySelector('form');
-    const addButton = document.querySelector('button');
-    const taskList = document.querySelector('div:last-child');
-    
-    // Aufgabe hinzufügen
-    form.addEventListener('submit', (event: Event) => {
-        event.preventDefault();
-    
-        const taskInput = document.querySelector('.task') as HTMLInputElement;
-        const whoSelect = document.querySelector('.who') as HTMLSelectElement;
-        const timeInput = document.querySelector('.time') as HTMLInputElement;
-        const dateInput = document.querySelector('.date') as HTMLInputElement;
-        const inProcessRadio = document.querySelector('.in_process') as HTMLInputElement;
-        const notInProcessRadio = document.querySelector('.not_in_process') as HTMLInputElement;
-        const commentInput = document.querySelector('.comment') as HTMLInputElement;
-    
-        const task: Task = {
-            title: taskInput.value,
-            who: whoSelect.value,
-            time: timeInput.value,
-            date: dateInput.value,
-            inProcess: inProcessRadio.checked,
-            comment: commentInput.value
-        };
-    
-        tasks.push(task);
-        renderTaskList();
-        form.reset();
-    });
-    
-    // Aufgabe löschen
-    taskList.addEventListener('click', (event: Event) => {
-        const deleteButton = event.target as HTMLButtonElement;
-        const taskId = deleteButton.dataset.id;
-        tasks.splice(parseInt(taskId), 1);
-        renderTaskList();
-    });
-    
-    // Aufgabenliste aktualisieren
-    function renderTaskList() {
-        taskList.innerHTML = '';
-        tasks.forEach((task, index) => {
-            const taskElement = document.createElement('div');
-            taskElement.innerHTML = `
-                <p><strong>${task.title}</strong></p>
-                <p>Wer erledigt? ${task.who}</p>
-                <p>Bis wann? ${task.time} ${task.date}</p>
-                <p>In Bearbeitung? ${task.inProcess ? 'Ja' : 'Nein'}</p>
-                <p>Kommentar: ${task.comment}</p>
-                <button data-id="${index}">Löschen</button>
+            // Formularfelder für neues div-Element
+            newDiv.innerHTML = `
+            <form>
+                <p>Produkt</p>
+                <input type="text" id="product" value="Klopapier" >
+                <br>
+                <p>Menge</p>
+                <input type="number" id="amount" value="2" >
+                <br>
+                <p>Kommentar</p>
+                <input type="text" id="comment" value="gute Qualität pls" >
+                <br>
+                <p>letzter Kauf</p>
+                <input type="date" id="lastBought" >
+                <br>
+                <p>gekauft</p>
+                <input type="checkbox" id="bought">
+                <p>löschen</p>
+                <input type="checkbox" id="delete">
+            </form>
             `;
-            taskList.appendChild(taskElement);
-        });
-    }
     
-    // Add Button Text aktualisieren
-    addButton.addEventListener('click', () => {
-        addButton.textContent = 'Hinzufügen';
+            // div-Element wird Hauptcontainer hinzugefügt
+            if (container) {
+                container.appendChild(newDiv);
+            }
+    
+            // Event-Listener für den Löschen-Button
+            const deleteButton = newDiv.querySelector('.delete') as HTMLButtonElement;
+            deleteButton.addEventListener('click', () => {
+
+                // Kommentar in Konsole, wenn Produkt gelöscht wird
+                console.log("Das Produkt wird gelöscht");
+
+                // Produkt-Element aus Hauptcontainer entfernen (-> beide vorhanden)
+                if (container && newDiv) {
+                    container.removeChild(newDiv);
+                }
+            });
+
+            // Event-Listener für Eingabefelder
+            const inputs = newDiv.querySelectorAll('input, select') as NodeListOf<HTMLInputElement | HTMLSelectElement>;
+            inputs.forEach(input => {
+
+                // Event-Listener für jedes Eingabefeld
+                input.addEventListener('input', () => {
+
+                    // Kommentar in Konsole, Wenn Eingabe im Feld
+                    console.log('Eingabe in Feld ${input.id}: Wurde hinzugefügt');
+                });
+            });
+        }
     });
-    }
+}
+
+
+
+
+
+
+
+
+

@@ -39,7 +39,7 @@ var Einkaufsliste_Formular;
                 container.appendChild(newDiv);
             }
             // Event-Listener für den Löschen-Button
-            const deleteButton = newDiv.querySelector('.delete');
+            const deleteButton = newDiv.querySelector('#delete');
             deleteButton.addEventListener('click', () => {
                 // Kommentar in Konsole, wenn Produkt gelöscht wird
                 console.log("Das Produkt wird gelöscht");

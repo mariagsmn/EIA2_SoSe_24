@@ -48,7 +48,7 @@ namespace Einkaufsliste_Formular {
             }
     
             // Event-Listener für den Löschen-Button
-            const deleteButton = newDiv.querySelector('.delete') as HTMLButtonElement;
+            const deleteButton = newDiv.querySelector('#delete') as HTMLButtonElement;
             deleteButton.addEventListener('click', () => {
 
                 // Kommentar in Konsole, wenn Produkt gelöscht wird

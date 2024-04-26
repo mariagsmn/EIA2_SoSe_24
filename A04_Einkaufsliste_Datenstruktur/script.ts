@@ -1,9 +1,9 @@
 let data = [{
     name: "Brot",
     amount: "2",
+    comment: "war abgelaufen",
     lastBought: "21.03.24",
-    wasBought: "true",
-    comment: "war abgelaufen"
+    toBeBought: "true"
 }
 
 ]

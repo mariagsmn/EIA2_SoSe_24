@@ -1,0 +1,43 @@
+ body {
+	background-color: #9195a3;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0%;
+    padding: 30%;
+	  text-align: center;   
+}
+
+h1{
+	color: rgb(212, 208, 203);
+}
+
+.box {
+    width: 80%; 
+    height: 20%; 
+    background-color: #829d9c; 
+    border: 2px solid rgb(96, 94, 94); 
+  }
+
+.box1{
+    width: 80%; 
+    height: 20%; 
+    background-color: #829d9c; 
+    border: 2px solid rgb(96, 94, 94);
+}  
+
+.box2 {
+    width: 80%; 
+    height: 20%; 
+    background-color: #829d9c; 
+    border: 2px solid rgb(96, 94, 94);
+}
+  
+.newProduct {
+    width: 20%;
+    height: 30%;
+    background-color: #495c5c; 
+	  color: rgb(184, 209, 209);
+	  margin-bottom: 10px;
+  
+}
+
+

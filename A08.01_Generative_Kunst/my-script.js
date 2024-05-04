@@ -14,7 +14,7 @@ var A08_01;
         for (let i = 0; i < 4; i++) { // Äußere Schleife für die erste Farbe.
             for (let z = 0; z < 3; z++) { // Innere Schleife für die zweite Farbe.
                 let x = Math.random() * 600; // Zufällige x-Position des Rechtecks.
-                let y = (i * 80) * z; // Berechnung der y-Position des Rechtecks.
+                let y = (i * 80) + (z * 80); // Berechnung der y-Position des Rechtecks.
                 // Switchcase für die Auswahl der Farben basierend auf dem äußeren und inneren Index.
                 switch (i) {
                     case 0:
@@ -48,8 +48,8 @@ var A08_01;
         }
         for (let i = 0; i < 10; i++) {
             for (let z = 0; z < 10; z++) {
-                let x = Math.random() * 300;
-                let y = (i * 80) + (z + 30) * z;
+                let x = Math.random() * 600;
+                let y = (i * 80) + (z + 80) * z;
                 drawCircle(x, y);
             }
         }

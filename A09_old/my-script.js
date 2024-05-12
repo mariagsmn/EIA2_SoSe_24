@@ -97,7 +97,7 @@ var A09;
             ctx.fill(); // Fülle den Vogel
         }
     }
-    class LandingSite {
+    class Grass {
         draw(ctx) {
             // Grasboden zeichnen
             ctx.fillStyle = "#228B22"; // Grün für den Grasboden
@@ -129,7 +129,7 @@ var A09;
         const mountains = new Mountains();
         const trees = new Trees();
         const birds = new Birds();
-        const landingSite = new LandingSite();
+        const grass = new Grass();
         const flyingInsects = new FlyingInsects();
         function draw() {
             sky.draw(ctx); //draw-Aufruf von dem Himmel
@@ -139,7 +139,7 @@ var A09;
             mountains.draw(ctx); //draw-Aufruf von den Bergen
             trees.draw(ctx); //draw-Aufruf von den Bäumen
             birds.draw(ctx); //draw-Aufruf von den Vögeln
-            landingSite.draw(ctx); //draw-Aufruf von der "Landebahn"
+            grass.draw(ctx); //draw-Aufruf von der "Landebahn"
             flyingInsects.draw(ctx); //draw-Aufruf von den fliegenden Insekten
         }
         draw();

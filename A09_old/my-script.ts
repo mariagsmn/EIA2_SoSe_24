@@ -115,7 +115,7 @@ namespace A09 {
         }
     }
 
-    class LandingSite {
+    class Grass {
         draw(ctx: CanvasRenderingContext2D) {
             // Grasboden zeichnen
             ctx.fillStyle = "#228B22"; // Grün für den Grasboden
@@ -151,7 +151,7 @@ namespace A09 {
         const mountains = new Mountains();
         const trees = new Trees();
         const birds = new Birds();
-        const landingSite = new LandingSite();
+        const grass = new Grass();
         const flyingInsects = new FlyingInsects();
 
         function draw() {
@@ -162,7 +162,7 @@ namespace A09 {
             mountains.draw(ctx);  //draw-Aufruf von den Bergen
             trees.draw(ctx);  //draw-Aufruf von den Bäumen
             birds.draw(ctx);  //draw-Aufruf von den Vögeln
-            landingSite.draw(ctx); //draw-Aufruf von der "Landebahn"
+            grass.draw(ctx); //draw-Aufruf von der "Landebahn"
             flyingInsects.draw(ctx);  //draw-Aufruf von den fliegenden Insekten
         }
 

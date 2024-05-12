@@ -1,8 +1,5 @@
 namespace A09 {
 
-    let canvas: HTMLCanvasElement = document.querySelector("canvas");
-    let ctx: CanvasRenderingContext2D = canvas.getContext("2d");
-
     class Sky {
         draw(ctx: CanvasRenderingContext2D) {
 
@@ -35,26 +32,6 @@ namespace A09 {
             ctx.fill();
         }
     }
-
-    window.addEventListener("load", () => {
-        const canvas = <HTMLCanvasElement>document.getElementById("myCanvas");
-        const ctx = canvas.getContext("2d");
-
-        const sky = new Sky();
-        const sun = new Sun(); (canvas.width - 50, 50, 30); // Position oben rechts
-        const cloud1 = new Clouds(100, 100, 30, "white");
-        const cloud2 = new Clouds(200, 150, 40, "white");
-
-        function draw() {
-            sky.draw(ctx);
-            sun.draw(ctx);
-            cloud1.draw(ctx);
-            cloud2.draw(ctx);
-        }
-        draw();
-    }
-    );
-
 
     class Sun {
         private x: number;

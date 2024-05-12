@@ -1,7 +1,5 @@
 var A09;
 (function (A09) {
-    let canvas = document.querySelector("canvas");
-    let ctx = canvas.getContext("2d");
     class Sky {
         draw(ctx) {
             const gradient = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
@@ -29,22 +27,6 @@ var A09;
             ctx.fill();
         }
     }
-    window.addEventListener("load", () => {
-        const canvas = document.getElementById("myCanvas");
-        const ctx = canvas.getContext("2d");
-        const sky = new Sky();
-        const sun = new Sun();
-        (canvas.width - 50, 50, 30); // Position oben rechts
-        const cloud1 = new Clouds(100, 100, 30, "white");
-        const cloud2 = new Clouds(200, 150, 40, "white");
-        function draw() {
-            sky.draw(ctx);
-            sun.draw(ctx);
-            cloud1.draw(ctx);
-            cloud2.draw(ctx);
-        }
-        draw();
-    });
     class Sun {
         x;
         y;

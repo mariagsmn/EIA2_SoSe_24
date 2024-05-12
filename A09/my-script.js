@@ -11,6 +11,7 @@ var A09;
         const trees = new Trees();
         const birds = new Birds();
         const grass = new Grass();
+        const lake = new Lake();
         const flyingInsects = new FlyingInsects();
         function draw() {
             sky.draw(ctx); //draw-Aufruf von dem Himmel
@@ -19,16 +20,17 @@ var A09;
             cloud1.draw(ctx); //draw-Aufruf von den Wolke1
             cloud2.draw(ctx); //draw-Aufruf von  Wolke2
             sun.draw(ctx); //draw-Aufruf von der Sonne
+            lake.draw(ctx); ////draw-Aufruf vom See
             trees.draw(ctx); //draw-Aufruf von dem Baum
             birds.draw(ctx); //draw-Aufruf von den Vögeln
-            grass.draw(ctx); //draw-Aufruf von der "Landebahn"
+            grass.draw(ctx); //draw-Aufruf vom Gras
             flyingInsects.draw(ctx); //draw-Aufruf von den fliegenden Insekten
         }
         function drawBackground() {
             console.log("Background");
             let gradient = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
             gradient.addColorStop(0.1, "#2980b9");
-            gradient.addColorStop(0.27, "orangered"); // Adjusted the position to 0.4 to match the desired position
+            gradient.addColorStop(0.27, "orangered");
             gradient.addColorStop(0.27, "hsl(120, 60%, 30%)");
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);

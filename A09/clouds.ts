@@ -1,8 +1,8 @@
 class Clouds {
-    private x: number;
-    private y: number;
-    private radius: number;
-    private color: string;
+     x: number;
+     y: number;
+     radius: number;
+     color: string;
 
     constructor(x: number, y: number, radius: number, color: string) {
         this.x = x;

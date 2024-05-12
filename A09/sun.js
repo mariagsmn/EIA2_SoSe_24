@@ -9,7 +9,7 @@ class Sun {
     }
     draw(ctx) {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.arc(280, 5, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = "yellow";
         ctx.fill();
     }

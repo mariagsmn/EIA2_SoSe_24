@@ -1,7 +1,7 @@
 class Sun {
-    private x: number;
-    private y: number;
-    private radius: number;
+    x: number;
+    y: number;
+    radius: number;
 
     constructor(x: number, y: number, radius: number) {
         this.x = x;
@@ -11,8 +11,9 @@ class Sun {
 
     draw(ctx: CanvasRenderingContext2D) {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.arc(280, 5, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = "yellow";
         ctx.fill();
     }
+
 }

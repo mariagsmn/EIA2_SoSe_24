@@ -34,6 +34,7 @@ var A09;
         const ctx = canvas.getContext("2d");
         const sky = new Sky();
         const sun = new Sun();
+        (canvas.width - 50, 50, 30); // Position oben rechts
         const cloud1 = new Clouds(100, 100, 30, "white");
         const cloud2 = new Clouds(200, 150, 40, "white");
         function draw() {

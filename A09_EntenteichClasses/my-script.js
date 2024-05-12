@@ -70,7 +70,6 @@ var A09;
             ctx.moveTo(250, 400); // Startpunkt des zweiten Berges
             ctx.lineTo(400, 200); // Zweite Bergspitze
             ctx.lineTo(550, 400); // Endpunkt des zweiten Berges
-            // Weitere Berge können auf die gleiche Weise hinzugefügt werden...
             ctx.fillStyle = "#A9A9A9"; // Graue Farbe für die Berge
             ctx.fill();
         }

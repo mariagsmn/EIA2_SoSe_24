@@ -10,5 +10,8 @@ class Birds {
         ctx.fillStyle = "black"; // Farbe des Vogels
         ctx.fill(); // Fülle den Vogel
     }
+    animateFromLeftToRight(ctx, distance) {
+        console.log(distance);
+    }
 }
 //# sourceMappingURL=birds.js.map

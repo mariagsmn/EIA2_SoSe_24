@@ -1,4 +1,6 @@
-class Birds {
+namespace A09_02{
+
+export class Birds {
     draw(ctx: CanvasRenderingContext2D) {
         // Vogel 1
         ctx.beginPath();
@@ -9,10 +11,12 @@ class Birds {
         ctx.closePath(); // Schließe den Pfad
         ctx.fillStyle = "black"; // Farbe des Vogels
         ctx.fill(); // Fülle den Vogel
+
     }
-    
     animateFromLeftToRight(ctx:CanvasRenderingContext2D, distance: number) {
         console.log(distance);
         
     }
 }
+}
+

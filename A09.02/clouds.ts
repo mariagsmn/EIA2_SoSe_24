@@ -1,4 +1,7 @@
-class Clouds {
+namespace A09_02{
+
+
+export class Clouds {
      x: number;
      y: number;
      radius: number;
@@ -25,5 +28,9 @@ class Clouds {
         ctx.fillStyle = "white";
         ctx.fill();
         ctx.closePath();
-    }    
+    }
+}   
+
+
+
 }
